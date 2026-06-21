@@ -1,0 +1,81 @@
+/* Reset the page so the game can use the full screen. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #1a2240 0%, #040611 55%, #010208 100%);
+  color: #f5f7ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+.hud {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  background: rgba(4, 6, 17, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(2, 3, 8, 0.78);
+  padding: 20px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.panel {
+  width: min(90vw, 420px);
+  padding: 28px;
+  border-radius: 20px;
+  background: rgba(9, 15, 31, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+}
+
+.panel h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.panel p {
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #d7defc;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4dc7ff, #2b6cff);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}

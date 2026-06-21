@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asteroids Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- The canvas is the game screen. Everything is drawn here with JavaScript. -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- A small HUD shows the current score. -->
+    <div class="hud">
+      <div id="score">Score: 0</div>
+    </div>
+
+    <!-- This overlay appears only when the game ends. -->
+    <div id="overlay" class="overlay hidden">
+      <div class="panel">
+        <h1>Asteroids</h1>
+        <p>Use the arrow keys to steer and the spacebar to shoot.</p>
+        <p>Final score: <span id="finalScore">0</span></p>
+        <button id="restartButton">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
